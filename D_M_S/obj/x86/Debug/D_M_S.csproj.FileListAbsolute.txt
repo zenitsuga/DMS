@@ -5,3 +5,10 @@ D:\Project\D_M_S\D_M_S\obj\x86\Debug\D_M_S.Properties.Resources.resources
 D:\Project\D_M_S\D_M_S\obj\x86\Debug\D_M_S.csproj.GenerateResource.Cache
 D:\Project\D_M_S\D_M_S\obj\x86\Debug\D_M_S.exe
 D:\Project\D_M_S\D_M_S\obj\x86\Debug\D_M_S.pdb
+C:\Users\cbiagtan\Documents\GitHub\DMS\D_M_S\obj\x86\Debug\D_M_S.exe
+C:\Users\cbiagtan\Documents\GitHub\DMS\D_M_S\obj\x86\Debug\D_M_S.pdb
+C:\Users\cbiagtan\Documents\GitHub\DMS\D_M_S\bin\Debug\D_M_S.exe
+C:\Users\cbiagtan\Documents\GitHub\DMS\D_M_S\bin\Debug\D_M_S.pdb
+C:\Users\cbiagtan\Documents\GitHub\DMS\D_M_S\obj\x86\Debug\D_M_S.FrmMain.resources
+C:\Users\cbiagtan\Documents\GitHub\DMS\D_M_S\obj\x86\Debug\D_M_S.Properties.Resources.resources
+C:\Users\cbiagtan\Documents\GitHub\DMS\D_M_S\obj\x86\Debug\D_M_S.csproj.GenerateResource.Cache
