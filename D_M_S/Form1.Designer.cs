@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("User Settings");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Database Settings");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Communication Settings");
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,6 +47,8 @@
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlSettings = new System.Windows.Forms.Panel();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.pnlSearch = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.pnlWorkspace = new System.Windows.Forms.Panel();
@@ -61,8 +66,8 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.lnkLogout = new System.Windows.Forms.LinkLabel();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.btnSettings = new System.Windows.Forms.Button();
-            this.pnlSettings = new System.Windows.Forms.Panel();
+            this.tvMailNodes = new System.Windows.Forms.TreeView();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -71,6 +76,7 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.pnlSettings.SuspendLayout();
             this.pnlSearch.SuspendLayout();
             this.pnlWorkspace.SuspendLayout();
             this.pnlCommunications.SuspendLayout();
@@ -79,7 +85,6 @@
             this.splitContainer2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlTitleSearch.SuspendLayout();
-            this.pnlSettings.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -214,12 +219,33 @@
             this.panel2.Size = new System.Drawing.Size(195, 598);
             this.panel2.TabIndex = 0;
             // 
+            // pnlSettings
+            // 
+            this.pnlSettings.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnlSettings.Controls.Add(this.treeView1);
+            this.pnlSettings.Controls.Add(this.btnSettings);
+            this.pnlSettings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSettings.Location = new System.Drawing.Point(0, 381);
+            this.pnlSettings.Name = "pnlSettings";
+            this.pnlSettings.Size = new System.Drawing.Size(195, 204);
+            this.pnlSettings.TabIndex = 3;
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSettings.Location = new System.Drawing.Point(0, 0);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(195, 23);
+            this.btnSettings.TabIndex = 1;
+            this.btnSettings.Text = "SETTINGS";
+            this.btnSettings.UseVisualStyleBackColor = true;
+            // 
             // pnlSearch
             // 
             this.pnlSearch.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pnlSearch.Controls.Add(this.btnSearch);
             this.pnlSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSearch.Location = new System.Drawing.Point(0, 191);
+            this.pnlSearch.Location = new System.Drawing.Point(0, 262);
             this.pnlSearch.Name = "pnlSearch";
             this.pnlSearch.Size = new System.Drawing.Size(195, 119);
             this.pnlSearch.TabIndex = 2;
@@ -239,7 +265,7 @@
             this.pnlWorkspace.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pnlWorkspace.Controls.Add(this.btnWorkspace);
             this.pnlWorkspace.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlWorkspace.Location = new System.Drawing.Point(0, 106);
+            this.pnlWorkspace.Location = new System.Drawing.Point(0, 177);
             this.pnlWorkspace.Name = "pnlWorkspace";
             this.pnlWorkspace.Size = new System.Drawing.Size(195, 85);
             this.pnlWorkspace.TabIndex = 1;
@@ -257,11 +283,12 @@
             // pnlCommunications
             // 
             this.pnlCommunications.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnlCommunications.Controls.Add(this.tvMailNodes);
             this.pnlCommunications.Controls.Add(this.btnCommunications);
             this.pnlCommunications.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCommunications.Location = new System.Drawing.Point(0, 0);
             this.pnlCommunications.Name = "pnlCommunications";
-            this.pnlCommunications.Size = new System.Drawing.Size(195, 106);
+            this.pnlCommunications.Size = new System.Drawing.Size(195, 177);
             this.pnlCommunications.TabIndex = 0;
             // 
             // btnCommunications
@@ -293,8 +320,8 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.Controls.Add(this.lblRecords);
             this.panel1.Location = new System.Drawing.Point(0, 176);
@@ -313,9 +340,9 @@
             // 
             // listView1
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(-1, 33);
@@ -327,8 +354,8 @@
             // 
             // pnlTitleSearch
             // 
-            this.pnlTitleSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlTitleSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlTitleSearch.BackColor = System.Drawing.SystemColors.Window;
             this.pnlTitleSearch.Controls.Add(this.btnSearchRecords);
             this.pnlTitleSearch.Controls.Add(this.textBox1);
@@ -401,25 +428,31 @@
             this.lblUsername.Text = "Welcome [User]";
             this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btnSettings
+            // tvMailNodes
             // 
-            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSettings.Location = new System.Drawing.Point(0, 0);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(195, 23);
-            this.btnSettings.TabIndex = 1;
-            this.btnSettings.Text = "SETTINGS";
-            this.btnSettings.UseVisualStyleBackColor = true;
+            this.tvMailNodes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tvMailNodes.Location = new System.Drawing.Point(0, 23);
+            this.tvMailNodes.Name = "tvMailNodes";
+            this.tvMailNodes.Size = new System.Drawing.Size(195, 136);
+            this.tvMailNodes.TabIndex = 2;
             // 
-            // pnlSettings
+            // treeView1
             // 
-            this.pnlSettings.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pnlSettings.Controls.Add(this.btnSettings);
-            this.pnlSettings.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSettings.Location = new System.Drawing.Point(0, 310);
-            this.pnlSettings.Name = "pnlSettings";
-            this.pnlSettings.Size = new System.Drawing.Size(195, 204);
-            this.pnlSettings.TabIndex = 3;
+            this.treeView1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.treeView1.Location = new System.Drawing.Point(0, 23);
+            this.treeView1.Name = "treeView1";
+            treeNode1.Name = "Users";
+            treeNode1.Text = "User Settings";
+            treeNode2.Name = "dbSettings";
+            treeNode2.Text = "Database Settings";
+            treeNode3.Name = "communication";
+            treeNode3.Text = "Communication Settings";
+            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+            this.treeView1.Size = new System.Drawing.Size(195, 136);
+            this.treeView1.TabIndex = 3;
             // 
             // FrmMain
             // 
@@ -449,6 +482,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.pnlSettings.ResumeLayout(false);
             this.pnlSearch.ResumeLayout(false);
             this.pnlWorkspace.ResumeLayout(false);
             this.pnlCommunications.ResumeLayout(false);
@@ -459,7 +493,6 @@
             this.panel1.PerformLayout();
             this.pnlTitleSearch.ResumeLayout(false);
             this.pnlTitleSearch.PerformLayout();
-            this.pnlSettings.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -500,6 +533,8 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel pnlSettings;
         private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.TreeView tvMailNodes;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }
 

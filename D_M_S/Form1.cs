@@ -14,10 +14,10 @@ namespace D_M_S
         public FrmMain()
         {
             InitializeComponent();
-            btnCommunications.MouseDoubleClick += MouseEventHandler (this.btnSidePanel_DoubleClick(btnCommunications, pnlCommunications, 204));
-            btnWorkspace.MouseDoubleClick += MouseEventHandler (this.btnSidePanel_DoubleClick(btnWorkspace, pnlWorkspace,204));
-            btnSearch.MouseDoubleClick += MouseEventHandler ( this.btnSidePanel_DoubleClick(btnSearch, pnlSearch, 204));
-            btnSettings.MouseDoubleClick += MouseEventHandler( this.btnSidePanel_DoubleClick(btnSettings, pnlSettings, 204));
+            btnCommunications.Click += delegate(object sender, EventArgs e) {btnSidePanel_DoubleClick(btnCommunications, pnlCommunications, 204);};
+            btnWorkspace.Click += delegate(object sender, EventArgs e) { btnSidePanel_DoubleClick(btnWorkspace, pnlWorkspace, 204); };
+            btnSearch.Click += delegate(object sender, EventArgs e) { btnSidePanel_DoubleClick(btnSearch, pnlSearch, 204); };
+            btnSettings.Click += delegate(object sender, EventArgs e) { btnSidePanel_DoubleClick(btnSettings, pnlSettings, 204); };
         }
 
         private void tmrClock_Tick(object sender, EventArgs e)
@@ -27,6 +27,9 @@ namespace D_M_S
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
+            frmSplashLogin spl = new frmSplashLogin();
+            spl.StartPosition = FormStartPosition.CenterScreen;
+            spl.ShowDialog();
             Button sidePanel = new Button();
             sidePanel.Text = "LoadMain";
             ResizeMySidePanel(sidePanel);
