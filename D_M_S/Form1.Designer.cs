@@ -43,22 +43,26 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.pnlTitleSearch = new System.Windows.Forms.Panel();
-            this.lnkLogout = new System.Windows.Forms.LinkLabel();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblRecords = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlSearch = new System.Windows.Forms.Panel();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.pnlWorkspace = new System.Windows.Forms.Panel();
             this.btnWorkspace = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pnlCommunications = new System.Windows.Forms.Panel();
+            this.btnCommunications = new System.Windows.Forms.Button();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblRecords = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.pnlTitleSearch = new System.Windows.Forms.Panel();
+            this.btnSearchRecords = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.lnkLogout = new System.Windows.Forms.LinkLabel();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.btnSettings = new System.Windows.Forms.Button();
+            this.pnlSettings = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -66,14 +70,16 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.pnlSearch.SuspendLayout();
+            this.pnlWorkspace.SuspendLayout();
+            this.pnlCommunications.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            this.pnlTitleSearch.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.pnlWorkspace.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnlTitleSearch.SuspendLayout();
+            this.pnlSettings.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -195,6 +201,79 @@
             this.splitContainer1.SplitterDistance = 195;
             this.splitContainer1.TabIndex = 3;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel2.Controls.Add(this.pnlSettings);
+            this.panel2.Controls.Add(this.pnlSearch);
+            this.panel2.Controls.Add(this.pnlWorkspace);
+            this.panel2.Controls.Add(this.pnlCommunications);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(195, 598);
+            this.panel2.TabIndex = 0;
+            // 
+            // pnlSearch
+            // 
+            this.pnlSearch.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnlSearch.Controls.Add(this.btnSearch);
+            this.pnlSearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSearch.Location = new System.Drawing.Point(0, 191);
+            this.pnlSearch.Name = "pnlSearch";
+            this.pnlSearch.Size = new System.Drawing.Size(195, 119);
+            this.pnlSearch.TabIndex = 2;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSearch.Location = new System.Drawing.Point(0, 0);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(195, 23);
+            this.btnSearch.TabIndex = 1;
+            this.btnSearch.Text = "SEARCH";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // pnlWorkspace
+            // 
+            this.pnlWorkspace.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnlWorkspace.Controls.Add(this.btnWorkspace);
+            this.pnlWorkspace.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlWorkspace.Location = new System.Drawing.Point(0, 106);
+            this.pnlWorkspace.Name = "pnlWorkspace";
+            this.pnlWorkspace.Size = new System.Drawing.Size(195, 85);
+            this.pnlWorkspace.TabIndex = 1;
+            // 
+            // btnWorkspace
+            // 
+            this.btnWorkspace.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnWorkspace.Location = new System.Drawing.Point(0, 0);
+            this.btnWorkspace.Name = "btnWorkspace";
+            this.btnWorkspace.Size = new System.Drawing.Size(195, 23);
+            this.btnWorkspace.TabIndex = 1;
+            this.btnWorkspace.Text = "WORKSPACE";
+            this.btnWorkspace.UseVisualStyleBackColor = true;
+            // 
+            // pnlCommunications
+            // 
+            this.pnlCommunications.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnlCommunications.Controls.Add(this.btnCommunications);
+            this.pnlCommunications.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCommunications.Location = new System.Drawing.Point(0, 0);
+            this.pnlCommunications.Name = "pnlCommunications";
+            this.pnlCommunications.Size = new System.Drawing.Size(195, 106);
+            this.pnlCommunications.TabIndex = 0;
+            // 
+            // btnCommunications
+            // 
+            this.btnCommunications.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCommunications.Location = new System.Drawing.Point(0, 0);
+            this.btnCommunications.Name = "btnCommunications";
+            this.btnCommunications.Size = new System.Drawing.Size(195, 23);
+            this.btnCommunications.TabIndex = 1;
+            this.btnCommunications.Text = "COMMUNICATIONS";
+            this.btnCommunications.UseVisualStyleBackColor = true;
+            // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -212,12 +291,46 @@
             this.splitContainer2.SplitterDistance = 199;
             this.splitContainer2.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.Controls.Add(this.lblRecords);
+            this.panel1.Location = new System.Drawing.Point(0, 176);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(674, 23);
+            this.panel1.TabIndex = 3;
+            // 
+            // lblRecords
+            // 
+            this.lblRecords.AutoSize = true;
+            this.lblRecords.Location = new System.Drawing.Point(5, 5);
+            this.lblRecords.Name = "lblRecords";
+            this.lblRecords.Size = new System.Drawing.Size(128, 13);
+            this.lblRecords.TabIndex = 2;
+            this.lblRecords.Text = "0 of 0 Record(s) Selected";
+            // 
+            // listView1
+            // 
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
+            this.listView1.Location = new System.Drawing.Point(-1, 33);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(675, 144);
+            this.listView1.TabIndex = 2;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
             // pnlTitleSearch
             // 
-            this.pnlTitleSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlTitleSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlTitleSearch.BackColor = System.Drawing.SystemColors.Window;
-            this.pnlTitleSearch.Controls.Add(this.btnSearch);
+            this.pnlTitleSearch.Controls.Add(this.btnSearchRecords);
             this.pnlTitleSearch.Controls.Add(this.textBox1);
             this.pnlTitleSearch.Controls.Add(this.label1);
             this.pnlTitleSearch.Controls.Add(this.lblTitle);
@@ -225,6 +338,43 @@
             this.pnlTitleSearch.Name = "pnlTitleSearch";
             this.pnlTitleSearch.Size = new System.Drawing.Size(674, 32);
             this.pnlTitleSearch.TabIndex = 1;
+            // 
+            // btnSearchRecords
+            // 
+            this.btnSearchRecords.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearchRecords.Location = new System.Drawing.Point(630, 5);
+            this.btnSearchRecords.Name = "btnSearchRecords";
+            this.btnSearchRecords.Size = new System.Drawing.Size(40, 23);
+            this.btnSearchRecords.TabIndex = 3;
+            this.btnSearchRecords.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(433, 6);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(191, 20);
+            this.textBox1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(390, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Search:";
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(6, 6);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(55, 20);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "[TItle]";
             // 
             // lnkLogout
             // 
@@ -251,127 +401,25 @@
             this.lblUsername.Text = "Welcome [User]";
             this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lblTitle
+            // btnSettings
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(6, 6);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(55, 20);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "[TItle]";
+            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSettings.Location = new System.Drawing.Point(0, 0);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(195, 23);
+            this.btnSettings.TabIndex = 1;
+            this.btnSettings.Text = "SETTINGS";
+            this.btnSettings.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // pnlSettings
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(390, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Search:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(433, 6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(191, 20);
-            this.textBox1.TabIndex = 2;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.Location = new System.Drawing.Point(630, 5);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(40, 23);
-            this.btnSearch.TabIndex = 3;
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // listView1
-            // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(-1, 33);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(675, 144);
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.SystemColors.Window;
-            this.panel1.Controls.Add(this.lblRecords);
-            this.panel1.Location = new System.Drawing.Point(0, 176);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(674, 23);
-            this.panel1.TabIndex = 3;
-            // 
-            // lblRecords
-            // 
-            this.lblRecords.AutoSize = true;
-            this.lblRecords.Location = new System.Drawing.Point(5, 5);
-            this.lblRecords.Name = "lblRecords";
-            this.lblRecords.Size = new System.Drawing.Size(128, 13);
-            this.lblRecords.TabIndex = 2;
-            this.lblRecords.Text = "0 of 0 Record(s) Selected";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.pnlWorkspace);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(195, 598);
-            this.panel2.TabIndex = 0;
-            // 
-            // pnlWorkspace
-            // 
-            this.pnlWorkspace.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pnlWorkspace.Controls.Add(this.btnWorkspace);
-            this.pnlWorkspace.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlWorkspace.Location = new System.Drawing.Point(0, 0);
-            this.pnlWorkspace.Name = "pnlWorkspace";
-            this.pnlWorkspace.Size = new System.Drawing.Size(195, 204);
-            this.pnlWorkspace.TabIndex = 0;
-            // 
-            // btnWorkspace
-            // 
-            this.btnWorkspace.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnWorkspace.Location = new System.Drawing.Point(0, 0);
-            this.btnWorkspace.Name = "btnWorkspace";
-            this.btnWorkspace.Size = new System.Drawing.Size(195, 23);
-            this.btnWorkspace.TabIndex = 1;
-            this.btnWorkspace.Text = "WORKSPACE";
-            this.btnWorkspace.UseVisualStyleBackColor = true;            
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 204);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(195, 204);
-            this.panel3.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "SEARCH";
-            this.button1.UseVisualStyleBackColor = true;
+            this.pnlSettings.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnlSettings.Controls.Add(this.btnSettings);
+            this.pnlSettings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSettings.Location = new System.Drawing.Point(0, 310);
+            this.pnlSettings.Name = "pnlSettings";
+            this.pnlSettings.Size = new System.Drawing.Size(195, 204);
+            this.pnlSettings.TabIndex = 3;
             // 
             // FrmMain
             // 
@@ -400,16 +448,18 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.pnlSearch.ResumeLayout(false);
+            this.pnlWorkspace.ResumeLayout(false);
+            this.pnlCommunications.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            this.pnlTitleSearch.ResumeLayout(false);
-            this.pnlTitleSearch.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.pnlWorkspace.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
+            this.pnlTitleSearch.ResumeLayout(false);
+            this.pnlTitleSearch.PerformLayout();
+            this.pnlSettings.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,17 +485,21 @@
         private System.Windows.Forms.LinkLabel lnkLogout;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnSearchRecords;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblRecords;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlCommunications;
+        private System.Windows.Forms.Button btnCommunications;
         private System.Windows.Forms.Panel pnlWorkspace;
         private System.Windows.Forms.Button btnWorkspace;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel pnlSearch;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Panel pnlSettings;
+        private System.Windows.Forms.Button btnSettings;
     }
 }
 

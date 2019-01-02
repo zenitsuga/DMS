@@ -12,3 +12,12 @@ C:\Users\cbiagtan\Documents\GitHub\DMS\D_M_S\bin\Debug\D_M_S.pdb
 C:\Users\cbiagtan\Documents\GitHub\DMS\D_M_S\obj\x86\Debug\D_M_S.FrmMain.resources
 C:\Users\cbiagtan\Documents\GitHub\DMS\D_M_S\obj\x86\Debug\D_M_S.Properties.Resources.resources
 C:\Users\cbiagtan\Documents\GitHub\DMS\D_M_S\obj\x86\Debug\D_M_S.csproj.GenerateResource.Cache
+C:\Users\King\Documents\GitHub\DMS\D_M_S\bin\Debug\D_M_S.exe
+C:\Users\King\Documents\GitHub\DMS\D_M_S\bin\Debug\D_M_S.pdb
+C:\Users\King\Documents\GitHub\DMS\D_M_S\obj\x86\Debug\D_M_S.csprojAssemblyReference.cache
+C:\Users\King\Documents\GitHub\DMS\D_M_S\obj\x86\Debug\D_M_S.FrmMain.resources
+C:\Users\King\Documents\GitHub\DMS\D_M_S\obj\x86\Debug\D_M_S.Properties.Resources.resources
+C:\Users\King\Documents\GitHub\DMS\D_M_S\obj\x86\Debug\D_M_S.csproj.GenerateResource.cache
+C:\Users\King\Documents\GitHub\DMS\D_M_S\obj\x86\Debug\D_M_S.csproj.CoreCompileInputs.cache
+C:\Users\King\Documents\GitHub\DMS\D_M_S\obj\x86\Debug\D_M_S.exe
+C:\Users\King\Documents\GitHub\DMS\D_M_S\obj\x86\Debug\D_M_S.pdb
