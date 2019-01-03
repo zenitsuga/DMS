@@ -15,7 +15,7 @@ namespace D_M_S
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMain());
+            Application.Run(new frmSplashLogin());
         }
     }
 }

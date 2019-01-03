@@ -48,12 +48,14 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlSettings = new System.Windows.Forms.Panel();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.btnSettings = new System.Windows.Forms.Button();
             this.pnlSearch = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.pnlWorkspace = new System.Windows.Forms.Panel();
             this.btnWorkspace = new System.Windows.Forms.Button();
             this.pnlCommunications = new System.Windows.Forms.Panel();
+            this.tvMailNodes = new System.Windows.Forms.TreeView();
             this.btnCommunications = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -66,8 +68,6 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.lnkLogout = new System.Windows.Forms.LinkLabel();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.tvMailNodes = new System.Windows.Forms.TreeView();
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -230,6 +230,24 @@
             this.pnlSettings.Size = new System.Drawing.Size(195, 204);
             this.pnlSettings.TabIndex = 3;
             // 
+            // treeView1
+            // 
+            this.treeView1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.treeView1.Location = new System.Drawing.Point(0, 23);
+            this.treeView1.Name = "treeView1";
+            treeNode1.Name = "Users";
+            treeNode1.Text = "User Settings";
+            treeNode2.Name = "dbSettings";
+            treeNode2.Text = "Database Settings";
+            treeNode3.Name = "communication";
+            treeNode3.Text = "Communication Settings";
+            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+            this.treeView1.Size = new System.Drawing.Size(195, 136);
+            this.treeView1.TabIndex = 3;
+            // 
             // btnSettings
             // 
             this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
@@ -291,6 +309,14 @@
             this.pnlCommunications.Size = new System.Drawing.Size(195, 177);
             this.pnlCommunications.TabIndex = 0;
             // 
+            // tvMailNodes
+            // 
+            this.tvMailNodes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tvMailNodes.Location = new System.Drawing.Point(0, 23);
+            this.tvMailNodes.Name = "tvMailNodes";
+            this.tvMailNodes.Size = new System.Drawing.Size(195, 136);
+            this.tvMailNodes.TabIndex = 2;
+            // 
             // btnCommunications
             // 
             this.btnCommunications.Dock = System.Windows.Forms.DockStyle.Top;
@@ -320,8 +346,8 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.Controls.Add(this.lblRecords);
             this.panel1.Location = new System.Drawing.Point(0, 176);
@@ -340,9 +366,9 @@
             // 
             // listView1
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(-1, 33);
@@ -354,8 +380,8 @@
             // 
             // pnlTitleSearch
             // 
-            this.pnlTitleSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlTitleSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlTitleSearch.BackColor = System.Drawing.SystemColors.Window;
             this.pnlTitleSearch.Controls.Add(this.btnSearchRecords);
             this.pnlTitleSearch.Controls.Add(this.textBox1);
@@ -427,32 +453,6 @@
             this.lblUsername.TabIndex = 4;
             this.lblUsername.Text = "Welcome [User]";
             this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // tvMailNodes
-            // 
-            this.tvMailNodes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tvMailNodes.Location = new System.Drawing.Point(0, 23);
-            this.tvMailNodes.Name = "tvMailNodes";
-            this.tvMailNodes.Size = new System.Drawing.Size(195, 136);
-            this.tvMailNodes.TabIndex = 2;
-            // 
-            // treeView1
-            // 
-            this.treeView1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.treeView1.Location = new System.Drawing.Point(0, 23);
-            this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Users";
-            treeNode1.Text = "User Settings";
-            treeNode2.Name = "dbSettings";
-            treeNode2.Text = "Database Settings";
-            treeNode3.Name = "communication";
-            treeNode3.Text = "Communication Settings";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3});
-            this.treeView1.Size = new System.Drawing.Size(195, 136);
-            this.treeView1.TabIndex = 3;
             // 
             // FrmMain
             // 
