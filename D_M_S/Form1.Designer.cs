@@ -33,6 +33,15 @@
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("User Settings");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Database Settings");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Communication Settings");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("INBOX");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("FOLDERS");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("SENT");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("OUTBOX");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("MESSAGES", new System.Windows.Forms.TreeNode[] {
+            treeNode4,
+            treeNode5,
+            treeNode6,
+            treeNode7});
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -314,8 +323,22 @@
             this.tvMailNodes.Dock = System.Windows.Forms.DockStyle.Top;
             this.tvMailNodes.Location = new System.Drawing.Point(0, 23);
             this.tvMailNodes.Name = "tvMailNodes";
+            treeNode4.Name = "inbox";
+            treeNode4.Text = "INBOX";
+            treeNode5.Name = "Folders";
+            treeNode5.Text = "FOLDERS";
+            treeNode6.Name = "sent";
+            treeNode6.Text = "SENT";
+            treeNode7.Name = "outbox";
+            treeNode7.Text = "OUTBOX";
+            treeNode8.Checked = true;
+            treeNode8.Name = "msg";
+            treeNode8.Text = "MESSAGES";
+            this.tvMailNodes.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode8});
             this.tvMailNodes.Size = new System.Drawing.Size(195, 136);
             this.tvMailNodes.TabIndex = 2;
+            this.tvMailNodes.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvMailNodes_AfterSelect);
             // 
             // btnCommunications
             // 

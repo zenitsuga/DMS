@@ -81,6 +81,11 @@ namespace D_M_S
             
         }
 
+        private void tvMailNodes_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
+
       
     }
 }

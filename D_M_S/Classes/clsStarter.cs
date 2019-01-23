@@ -25,7 +25,7 @@ namespace D_M_S.Classes
             {
                 string AppName = System.AppDomain.CurrentDomain.FriendlyName;
              
-                string ConfigFile = Environment.CurrentDirectory + "\\" + AppName.Replace(".exe", ".ini");
+                string ConfigFile = Environment.CurrentDirectory + "\\" + AppName.Replace(".exe", ".ini").Replace(".vshost","");
                 if(File.Exists(ConfigFile))
                 { 
                     result = true;
